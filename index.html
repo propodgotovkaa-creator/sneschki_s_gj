@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Снежная крепость · З–Ж</title>
+<link rel="stylesheet" href="style.css">
+<script src="game.js" defer></script>
+</head>
+<body>
+<main id="field" data-screen="menu">
+<div class="landscape"></div><div class="veil"></div><div class="front-wall" aria-hidden="true"></div>
+<div id="snow" aria-hidden="true"></div>
+<section id="menu" class="paper">
+<h1>Снежная <br>крепость</h1>
+<fieldset><legend>Выбери звук</legend><div class="choices" id="sounds"><button data-value="z" aria-pressed="true">Звук З</button><button data-value="zh" aria-pressed="false">Звук Ж</button></div></fieldset>
+<fieldset><legend>Жизни</legend><div class="choices" id="counts"><button aria-label="3 жизни" data-value="3" aria-pressed="false">3</button><button aria-label="4 жизни" data-value="4" aria-pressed="false">4</button><button aria-label="5 жизней" data-value="5" aria-pressed="true">5</button></div></fieldset>
+<button class="primary" id="play">Играть</button>
+<button class="secondary" id="rulesButton" aria-haspopup="dialog">Правила</button>
+<dialog id="rules" aria-labelledby="rulesTitle">
+<h2 id="rulesTitle">Правила</h2>
+<p>Выбери звук З или Ж. Назови картинку на табличке. Слышишь в слове свой звук? Нажми на картинку, чтобы бросить снежок.</p>
+<p>Картинки можно пропускать. За ошибку теряется одно сердечко.</p>
+<p>Попади в 15 нужных картинок, чтобы победить!</p>
+<form method="dialog"><button class="primary" autofocus>Понятно</button></form>
+</dialog>
+</section>
+<div id="hud" hidden><div class="stat">Попадания <strong id="score">0/15</strong></div><div id="prompt" hidden></div><div class="stat" id="lives"></div></div>
+<div id="boards" hidden></div>
+<img id="boy" alt="" src="assets/boy.png">
+<section id="end" class="paper" hidden aria-labelledby="ending"><h2 id="ending"></h2><p id="summary"></p><p id="remaining"></p><button class="primary" id="again">Играть ещё</button><button class="secondary" id="back">Главное меню</button></section>
+<div class="sr" id="announce" aria-live="polite"></div>
+</main>
+</body></html>
