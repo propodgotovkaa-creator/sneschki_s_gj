@@ -50,7 +50,7 @@ let bags, recent, groupPair;
 let lastSpot = -1;
 let activeBoard = null;
 let cycleTimer = 0;
-const readingTime = 3000;
+const readingTime = 6000;
 
 function drawCard(){
   // Each pair contains both sounds; each group runs through its own shuffled bag.
